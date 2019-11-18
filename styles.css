@@ -68,13 +68,18 @@ body {
 
 #liv_board {
     display: flex;
+    position: absolute;
+    top: 2vw;
+    left: 76vw;
 }
 
 .hjerter {
     background-image: url(svg/hjerte.svg);
     background-size: cover;
-    width: 10vw;
-    height: 8vw;
+    width: 6.5vw;
+    height: 5.2vw;
+    margin-left: 5px;
+
 }
 
 #good_knap {
@@ -85,6 +90,27 @@ body {
     top: 15vw;
     left: 30vw;
     position: absolute;
+}
+
+#time_board {
+    background-image: url(svg/timer_tom.svg);
+    width: 25vw;
+    height: 4.3478260869565215vw;
+    background-size: cover;
+    position: absolute;
+    top: 2vw;
+    left: 5vw;
+
+}
+
+#time_board_fill {
+    width: 0vw;
+    background-color: #F2798F;
+    height: 3vw;
+    position: absolute;
+    top: 0.8vw;
+    left: 0.5vw;
+    z-index: -1;
 }
 
 
@@ -128,5 +154,23 @@ body {
 
     100% {
         transform: scale(1);
+    }
+}
+
+.timer {
+    animation-name: timer_kf;
+    animation-iteration-count: 1;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes timer_kf {
+    from {
+        width: 24vw;
+    }
+
+    to {
+        width: 0vw;
     }
 }
