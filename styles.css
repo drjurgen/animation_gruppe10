@@ -66,6 +66,7 @@ body {
     /* background-image: url(); */
     background-size: cover;
     position: absolute;
+    pointer-events: none;
 }
 
 #game_foreground {
@@ -74,6 +75,7 @@ body {
     /* background-image: url(); */
     background-size: cover;
     position: absolute;
+    pointer-events: none;
 }
 
 
@@ -92,7 +94,6 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    pointer-events: none;
 }
 
 #liv_board {
@@ -112,12 +113,22 @@ body {
 }
 
 #good_knap {
-    background-image: url(svg/knap1.svg);
+    background-image: url(svg/good_knap.svg);
     background-size: cover;
     height: 10vw;
     width: 10vw;
     top: 15vw;
-    left: 30vw;
+    left: 80vw;
+    position: absolute;
+}
+
+#bad_knap {
+    background-image: url(svg/bad_knap.svg);
+    background-size: cover;
+    height: 10vw;
+    width: 10vw;
+    top: 15vw;
+    left: 20vw;
     position: absolute;
 }
 
@@ -159,6 +170,7 @@ body {
     top: 2.7vw;
     left: 40vw;
 }
+
 
 
 /*--------LEVEL COMPLETE--------*/

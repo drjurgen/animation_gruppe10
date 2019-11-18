@@ -63,13 +63,8 @@ function startGame() {
     points = 0;
 
     // Eventlisteners til good og bad knapper - click
-    document.querySelector("#billede1").addEventListener("click", goodSelector);
-    document.querySelector("#billede2").addEventListener("click", goodSelector);
-    document.querySelector("#billede3").addEventListener("click", goodSelector);
-    document.querySelector("#billede4").addEventListener("click", goodSelector);
-    document.querySelector("#billede5").addEventListener("click", goodSelector);
-    document.querySelector("#billede6").addEventListener("click", goodSelector);
-    document.querySelector("#billede7").addEventListener("click", goodSelector);
+    document.querySelector("#good_knap").addEventListener("click", goodSelector);
+    document.querySelector("#bad_knap").addEventListener("click", badSelector);
 
 
     // Baggrundsmusik spilles
@@ -86,7 +81,7 @@ function goodSelector() {
     console.log("goodSelector");
 
     // if sætning som tjekker om man har valgt rigtigt og den rigtige figur vises
-    if (this.classList.contains("good")) {
+    if (document.querySelector("#billede" + randomtal).classList.contains("good")) {
         console.log("du fik point")
 
         // faar point hvis man vælger rigtigt
@@ -102,21 +97,20 @@ function goodSelector() {
         liv--;
     }
 
-    document.querySelector("#billede1").removeEventListener("click", goodSelector);
-    document.querySelector("#billede2").removeEventListener("click", goodSelector);
-    document.querySelector("#billede3").removeEventListener("click", goodSelector);
-    document.querySelector("#billede4").removeEventListener("click", goodSelector);
-    document.querySelector("#billede5").removeEventListener("click", goodSelector);
-    document.querySelector("#billede6").removeEventListener("click", goodSelector);
-    document.querySelector("#billede7").removeEventListener("click", goodSelector);
-
     // Billedet forsvinder - animation
-    this.classList.add("hide");
+
+    this.classList.add("tryk");
+
+
+    document.querySelector("#good_knap").removeEventListener("click", goodSelector);
+    document.querySelector("#bad_knap").removeEventListener("click", badSelector);
+
+
 
     // if sætning om der er liv tilbage eller ikke
 
     if (liv >= 1) {
-        respawn();
+        this.addEventListener("animationend", respawn);
 
     } else {
         gameOver();
@@ -164,21 +158,21 @@ function badSelector() {
 function respawn() {
     console.log("respawn");
 
+    document.querySelector("#billede" + randomtal).classList.add("hide");
+
+
     randomtal = Math.floor(Math.random() * 7) + 1;
 
     // Der vises et nyt random billede
     // hide classen fjernes
     document.querySelector("#billede" + randomtal).classList.remove("hide");
 
+    document.querySelector("#good_knap").classList.remove("tryk");
+    document.querySelector("#bad_knap").classList.remove("tryk");
 
     // animation paa billede
-    document.querySelector("#billede1").addEventListener("click", goodSelector);
-    document.querySelector("#billede2").addEventListener("click", goodSelector);
-    document.querySelector("#billede3").addEventListener("click", goodSelector);
-    document.querySelector("#billede4").addEventListener("click", goodSelector);
-    document.querySelector("#billede5").addEventListener("click", goodSelector);
-    document.querySelector("#billede6").addEventListener("click", goodSelector);
-    document.querySelector("#billede7").addEventListener("click", goodSelector);
+    document.querySelector("#good_knap").addEventListener("click", goodSelector);
+    document.querySelector("#bad_knap").addEventListener("click", badSelector);
 
 
 }
