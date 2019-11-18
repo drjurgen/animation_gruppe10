@@ -11,15 +11,19 @@
 
 <body>
     <div id="screen">
-        <div id="start"></div>
-
-        <div id="game">
+        <div id="start">
+            <div id="startknap" class="pulse"></div>
+        </div>
+        <div id="gameinfo" class="hide"></div>
+        <div id="game" class="hide">
             <div id="game_foreground"></div>
             <div id="game_background"></div>
             <div id="game_elements"></div>
 
             <div id="game_ui">
-                <div id="score_board"></div>
+                <div id="score_board" class="farveskift">SCORE
+                    <div id="score_points">0</div>
+                </div>
                 <div id="time_board">
                     <div id="time_board_fill" class="timer"></div>
                 </div>
@@ -35,8 +39,8 @@
             </div>
         </div>
 
-        <div id="gameover"></div>
-        <div id="levelcomplete"></div>
+        <div id="gameover" class="hide"></div>
+        <div id="levelcomplete" class="hide"></div>
     </div>
 
 

@@ -15,6 +15,14 @@ body {
     overflow: hidden;
 }
 
+.grey {
+    filter: grayscale(1);
+}
+
+.hide {
+    display: none;
+}
+
 
 /*--------STARTSKÆRM--------*/
 #start {
@@ -23,8 +31,26 @@ body {
     /* background-image: url(); */
     background-size: cover;
     position: absolute;
+    background-color: aqua;
 }
 
+#startknap {
+    background-image: url(svg/startknap.svg);
+    width: 20vw;
+    height: 10vw;
+    background-size: cover;
+    position: absolute;
+    left: 40vw;
+    top: 10vw;
+}
+
+/*---------- INFO SKÆRM ------------------*/
+
+#gameinfo {
+    height: 100%;
+    width: 100%;
+
+}
 
 /*--------GAME/BACKGROUND/FOREGROUND--------*/
 #game {
@@ -70,7 +96,7 @@ body {
     display: flex;
     position: absolute;
     top: 2vw;
-    left: 76vw;
+    left: 75.5vw;
 }
 
 .hjerter {
@@ -111,6 +137,24 @@ body {
     top: 0.8vw;
     left: 0.5vw;
     z-index: -1;
+}
+
+#score_points {
+    font-family: 'Press Start 2P', cursive;
+    color: #592E56;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 0vw;
+    left: 22vw;
+}
+
+#score_board {
+    font-family: 'Press Start 2P', cursive;
+    color: #592E56;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 2.7vw;
+    left: 40vw;
 }
 
 
@@ -172,5 +216,50 @@ body {
 
     to {
         width: 0vw;
+    }
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.farveskift {
+    animation-name: farveskift_kf;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+
+}
+
+@keyframes farveskift_kf {
+    0% {
+        color: #592E56;
+    }
+
+    /*
+    50% {
+        color: #592E56;
+    }*/
+
+    100% {
+        color: #F2798F;
     }
 }
