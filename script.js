@@ -23,6 +23,8 @@ function sidenLoades() {
 
 
 
+
+
 }
 
 function infoScreen() {
@@ -71,6 +73,9 @@ function startGame() {
 
     // Timer gaar i gang
     document.querySelector("#time_board_fill").classList.add("timer");
+
+    // event listener til timer
+    document.querySelector("#time_board_fill").addEventListener("animationend", spilSlut);
 
     // et random billede vises
     document.querySelector("#billede" + randomtal).classList.remove("hide");
@@ -142,14 +147,19 @@ function badSelector() {
 
     }
 
+    this.classList.add("tryk");
 
-    // mister liv hvis man vælger forkert
-
-    // faar point hvis man vælger rigtigt
 
     // Billedet forsvinder - animation, add class "hide"
 
     // if sætning om der er liv tilbage eller ikke
+
+    if (liv >= 1) {
+        this.addEventListener("animationend", respawn);
+
+    } else {
+        gameOver();
+    }
 
     this.removeEventListener("click", badSelector);
 
@@ -181,14 +191,21 @@ function spilSlut() {
     console.log("spilSlut");
 
     // if sætning tjekker om man har point nok til at vinde, ellers taber man
+    if (points >= 10) {
+        levelComplete();
+    } else {
+        gameOver();
+    }
 
     // slukker alle event listeners
+
 }
 
 function levelComplete() {
     console.log("levelComplete");
 
     // spilskærm hides
+
 
     // Level complete skærm vises
 
