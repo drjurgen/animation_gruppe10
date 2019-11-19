@@ -5,7 +5,7 @@ let liv;
 let randomtal;
 
 
-randomtal = Math.floor(Math.random() * 7) + 1;
+randomtal = Math.floor(Math.random() * 10) + 1;
 console.log(randomtal);
 
 
@@ -187,7 +187,7 @@ function respawn() {
     document.querySelector("#billede" + randomtal).classList.add("hide");
 
 
-    randomtal = Math.floor(Math.random() * 7) + 1;
+    randomtal = Math.floor(Math.random() * 10) + 1;
 
     // Der vises et nyt random billede
     // hide classen fjernes

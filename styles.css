@@ -94,10 +94,10 @@ body {
 #figurerneutral {
     background-image: url(assets/character_neutral.svg);
     background-size: cover;
-    height: 30vw;
-    width: 30vw;
-    bottom: 3vw;
-    right: 10vw;
+    height: 40vw;
+    width: 40vw;
+    bottom: 2vw;
+    right: 2vw;
     position: absolute;
 }
 
@@ -117,6 +117,84 @@ body {
     width: 30vw;
 }
 
+/*-------------- BILLEDER ------------*/
+
+#billeder {
+    position: absolute;
+    top: 15vw;
+    left: 22vw;
+}
+
+#billede1 {
+    background-image: url(assets/good_1_1.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede2 {
+    background-image: url(assets/good_2.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede3 {
+    background-image: url(assets/good_3.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede4 {
+    background-image: url(assets/good_4.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede5 {
+    background-image: url(assets/good_5.svg);
+    width: 25vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede6 {
+    background-image: url(assets/bad_1.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede7 {
+    background-image: url(assets/bad_2.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede8 {
+    background-image: url(assets/bad_3.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede9 {
+    background-image: url(assets/bad_4.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
+#billede10 {
+    background-image: url(assets/bad_5.svg);
+    width: 24vw;
+    height: 38.018957345971565vw;
+    background-size: cover;
+}
+
 /*--------- GAME UI ----------------*/
 
 #game_ui {
@@ -133,7 +211,7 @@ body {
 }
 
 .hjerter {
-    background-image: url(svg/hjerte.svg);
+    background-image: url(svg/hjerte_ny.svg);
     background-size: cover;
     width: 6.5vw;
     height: 5.2vw;
@@ -146,7 +224,7 @@ body {
     background-size: cover;
     height: 10vw;
     width: 10vw;
-    top: 20vw;
+    top: 25vw;
     left: 50vw;
     position: absolute;
 }
@@ -156,7 +234,7 @@ body {
     background-size: cover;
     height: 10vw;
     width: 10vw;
-    top: 20vw;
+    top: 25vw;
     left: 8vw;
     position: absolute;
 }
@@ -334,7 +412,7 @@ body {
     animation-name: farveskift_kf;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-duration: 0.5s;
+    animation-duration: 2s;
 
 }
 
@@ -343,12 +421,12 @@ body {
         color: #592E56;
     }
 
-    /*
+
     50% {
-        color: #592E56;
-    }*/
+        color: #F2798F;
+    }
 
     100% {
-        color: #F2798F;
+        color: #592E56;
     }
 }
