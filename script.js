@@ -12,6 +12,11 @@ console.log(randomtal);
 function sidenLoades() {
     console.log("sidenLoades");
 
+    // hider andre skærme
+    document.querySelector("#gameinfo").classList.add("hide");
+    document.querySelector("#gameover").classList.add("hide");
+    document.querySelector("#levelcomplete").classList.add("hide");
+
     // startskærm vises
     document.querySelector("#start").classList.remove("hide");
 
@@ -54,15 +59,26 @@ function startGame() {
     document.querySelector("#gameinfo").removeEventListener("click", startGame);
 
 
-    // Infoskærm hides
+    // Infoskærm hides og andre skærme
     document.querySelector("#gameinfo").classList.add("hide");
+    document.querySelector("#gameover").classList.add("hide");
+    document.querySelector("#levelcomplete").classList.add("hide");
+
 
     // Spilskærm vises
     document.querySelector("#game").classList.remove("hide");
 
     // Liv og point og timer nultilles
+    document.querySelector("#hjerte1").classList.remove("grey");
+    document.querySelector("#hjerte2").classList.remove("grey");
+    document.querySelector("#hjerte3").classList.remove("grey");
+
+
     liv = 3;
     points = 0;
+
+    document.querySelector("#score_points").innerHTML = points;
+
 
     // Eventlisteners til good og bad knapper - click
     document.querySelector("#good_knap").addEventListener("click", goodSelector);
@@ -128,7 +144,7 @@ function badSelector() {
     console.log("badSelector");
 
     // if sætning som tjekker om man har valgt rigtigt og den rigtige figur vises
-    if (this.classList.contains("good")) {
+    if (document.querySelector("#billede" + randomtal).classList.contains("good")) {
         console.log("du fik ikke point")
 
         document.querySelector("#hjerte" + liv).classList.add("grey");
@@ -205,21 +221,40 @@ function levelComplete() {
     console.log("levelComplete");
 
     // spilskærm hides
-
+    document.querySelector("#game").classList.add("hide");
 
     // Level complete skærm vises
+    document.querySelector("#levelcomplete").classList.remove("hide");
 
-    // event listerner til spil igen
+    // event listerner til spil igen og main menu knap
+    document.querySelector("#spiligenknap_lc").addEventListener("click", startGame);
+
+    document.querySelector("#mainmenuknap_lc").addEventListener("click", sidenLoades);
+
 }
 
 function gameOver() {
     console.log("gameOver");
 
     // spilskærm hides
+    document.querySelector("#game").classList.add("hide");
 
     // Game over skærm vises
+    document.querySelector("#gameover").classList.remove("hide");
+
 
     // slukker alle event listeners
+    document.querySelector("#good_knap").removeEventListener("click", goodSelector);
+    document.querySelector("#bad_knap").removeEventListener("click", badSelector);
 
-    // eventlistener til spil igen knap
+    document.querySelector("#good_knap").removeEventListener("click", goodSelector);
+    document.querySelector("#bad_knap").removeEventListener("click", badSelector);
+
+
+    // eventlistener til spil igen knap og main menu knap
+    document.querySelector("#spiligenknap_go").addEventListener("click", startGame);
+
+    document.querySelector("#mainmenuknap_go").addEventListener("click", sidenLoades);
+
+
 }

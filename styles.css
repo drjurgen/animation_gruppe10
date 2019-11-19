@@ -182,6 +182,25 @@ body {
     position: absolute;
 }
 
+#spiligenknap_lc {
+    background-image: url(svg/spiligen_knap.svg);
+    width: 20vw;
+    height: 6.875vw;
+    background-size: cover;
+    position: absolute;
+    top: 30vw;
+    left: 20vw;
+}
+
+#mainmenuknap_lc {
+    background-image: url(svg/mainmenu_knap.svg);
+    width: 20vw;
+    height: 6.875vw;
+    background-size: cover;
+    position: absolute;
+    top: 30vw;
+    left: 40vw;
+}
 
 /*--------GAME OVER--------*/
 #gameover {
@@ -191,6 +210,28 @@ body {
     background-size: cover;
     position: absolute;
 }
+
+#spiligenknap_go {
+    background-image: url(svg/spiligen_knap.svg);
+    width: 20vw;
+    height: 6.875vw;
+    background-size: cover;
+    position: absolute;
+    top: 30vw;
+    left: 20vw;
+}
+
+#mainmenuknap_go {
+    background-image: url(svg/mainmenu_knap.svg);
+    width: 20vw;
+    height: 6.875vw;
+    background-size: cover;
+    position: absolute;
+    top: 30vw;
+    left: 40vw;
+}
+
+
 
 
 /*--------ANIMATIONER--------*/
