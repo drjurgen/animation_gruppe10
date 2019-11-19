@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    position: sticky;
+    top: 5vw;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: black;
+    transition: 0.3s;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: hotpink;
+}
+
+#top {
+    padding-top: 10px;
+}
+
+/******* TEKST*******************/
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#tiltop {
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+#tiltop img {
+    width: 7vw;
+}
+
+
+section {
+    padding: 30px 25px 0 25px;
+}
