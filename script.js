@@ -231,6 +231,9 @@ function levelComplete() {
 
     document.querySelector("#mainmenuknap_lc").addEventListener("click", sidenLoades);
 
+    document.querySelector("#good_knap").classList.remove("tryk");
+    document.querySelector("#bad_knap").classList.remove("tryk");
+
 }
 
 function gameOver() {
@@ -255,6 +258,9 @@ function gameOver() {
     document.querySelector("#spiligenknap_go").addEventListener("click", startGame);
 
     document.querySelector("#mainmenuknap_go").addEventListener("click", sidenLoades);
+
+    document.querySelector("#good_knap").classList.remove("tryk");
+    document.querySelector("#bad_knap").classList.remove("tryk");
 
 
 }

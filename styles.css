@@ -28,10 +28,9 @@ body {
 #start {
     width: 100%;
     height: 100%;
-    /* background-image: url(); */
+    background-image: url(assets/startscreen.png);
     background-size: cover;
     position: absolute;
-    background-color: aqua;
 }
 
 #startknap {
@@ -41,7 +40,7 @@ body {
     background-size: cover;
     position: absolute;
     left: 40vw;
-    top: 10vw;
+    top: 5vw;
 }
 
 /*---------- INFO SKÆRM ------------------*/
@@ -67,15 +66,20 @@ body {
     background-size: cover;
     position: absolute;
     pointer-events: none;
+    background-image: url(assets/baggrund.png);
+    z-index: -1;
 }
 
 #game_foreground {
-    width: 100%;
-    height: 100%;
-    /* background-image: url(); */
     background-size: cover;
     position: absolute;
     pointer-events: none;
+    background-image: url(assets/forgrund.svg);
+    height: 45vw;
+    width: 45vw;
+    bottom: 0vw;
+    left: 10vw;
+    z-index: 2;
 }
 
 
@@ -84,8 +88,33 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 20vw;
-    left: 30vw;
+
+}
+
+#figurerneutral {
+    background-image: url(assets/character_neutral.svg);
+    background-size: cover;
+    height: 30vw;
+    width: 30vw;
+    bottom: 3vw;
+    right: 10vw;
+    position: absolute;
+}
+
+#figurerhappy {
+    background-image: url(assets/character_happy.svg);
+    background-size: cover;
+    height: 30vw;
+    width: 30vw;
+
+}
+
+
+#figurersad {
+    background-image: url(assets/character_sad.svg);
+    background-size: cover;
+    height: 30vw;
+    width: 30vw;
 }
 
 /*--------- GAME UI ----------------*/
@@ -117,8 +146,8 @@ body {
     background-size: cover;
     height: 10vw;
     width: 10vw;
-    top: 15vw;
-    left: 80vw;
+    top: 20vw;
+    left: 50vw;
     position: absolute;
 }
 
@@ -127,8 +156,8 @@ body {
     background-size: cover;
     height: 10vw;
     width: 10vw;
-    top: 15vw;
-    left: 20vw;
+    top: 20vw;
+    left: 8vw;
     position: absolute;
 }
 
@@ -239,7 +268,7 @@ body {
 .tryk {
     animation-name: tryk_kf;
     animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    animation-duration: 3s;
     animation-timing-function: ease-in;
 }
 
@@ -248,8 +277,12 @@ body {
         transform: scale(1);
     }
 
-    50% {
+    10% {
         transform: scale(0.5);
+    }
+
+    20% {
+        transform: scale(1);
     }
 
     100% {
