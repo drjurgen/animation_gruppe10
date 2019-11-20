@@ -104,17 +104,22 @@ body {
 #figurerhappy {
     background-image: url(assets/character_happy.svg);
     background-size: cover;
-    height: 30vw;
-    width: 30vw;
-
+    height: 40vw;
+    width: 40vw;
+    bottom: 2vw;
+    right: 0vw;
+    position: absolute;
 }
 
 
 #figurersad {
     background-image: url(assets/character_sad.svg);
     background-size: cover;
-    height: 30vw;
-    width: 30vw;
+    height: 40vw;
+    width: 40vw;
+    bottom: 2.5vw;
+    right: 0.5vw;
+    position: absolute;
 }
 
 /*-------------- BILLEDER ------------*/
