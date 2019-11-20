@@ -73,6 +73,10 @@ function startGame() {
     document.querySelector("#hjerte2").classList.remove("grey");
     document.querySelector("#hjerte3").classList.remove("grey");
 
+    document.querySelector("#figurerhappy").classList.add("hide");
+    document.querySelector("#figurersad").classList.add("hide");
+    document.querySelector("#figurerneutral").classList.remove("hide");
+
 
     liv = 3;
     points = 0;
@@ -109,6 +113,9 @@ function goodSelector() {
         points++;
 
         document.querySelector("#score_points").innerHTML = points;
+
+        document.querySelector("#figurerhappy").classList.remove("hide");
+        document.querySelector("#figurerneutral").classList.add("hide");
     } else {
         console.log("du fik ikke points")
 
@@ -116,6 +123,9 @@ function goodSelector() {
 
         // mister liv hvis man vælger forkert
         liv--;
+
+        document.querySelector("#figurersad").classList.remove("hide");
+        document.querySelector("#figurerneutral").classList.add("hide");
     }
 
     // Billedet forsvinder - animation
@@ -134,7 +144,8 @@ function goodSelector() {
         this.addEventListener("animationend", respawn);
 
     } else {
-        gameOver();
+        this.addEventListener("animationend", gameOver);
+
     }
 
 
@@ -152,6 +163,11 @@ function badSelector() {
         // faar point hvis man vælger rigtigt
         liv--;
 
+        document.querySelector("#figurersad").classList.remove("hide");
+        document.querySelector("#figurerneutral").classList.add("hide");
+
+
+
     } else {
         console.log("du fik points")
 
@@ -160,6 +176,9 @@ function badSelector() {
         points++;
 
         document.querySelector("#score_points").innerHTML = points;
+
+        document.querySelector("#figurerhappy").classList.remove("hide");
+        document.querySelector("#figurerneutral").classList.add("hide");
 
     }
 
@@ -174,7 +193,7 @@ function badSelector() {
         this.addEventListener("animationend", respawn);
 
     } else {
-        gameOver();
+        this.addEventListener("animationend", gameOver);
     }
 
     this.removeEventListener("click", badSelector);
@@ -196,9 +215,13 @@ function respawn() {
     document.querySelector("#good_knap").classList.remove("tryk");
     document.querySelector("#bad_knap").classList.remove("tryk");
 
-    // animation paa billede
+    // fjerne event listeners
     document.querySelector("#good_knap").addEventListener("click", goodSelector);
     document.querySelector("#bad_knap").addEventListener("click", badSelector);
+
+    document.querySelector("#figurerhappy").classList.add("hide");
+    document.querySelector("#figurersad").classList.add("hide");
+    document.querySelector("#figurerneutral").classList.remove("hide");
 
 
 }
