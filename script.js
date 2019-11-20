@@ -5,7 +5,7 @@ let liv;
 let randomtal;
 
 
-randomtal = Math.floor(Math.random() * 10) + 1;
+randomtal = Math.floor(Math.random() * 20) + 1;
 console.log(randomtal);
 
 
@@ -77,6 +77,9 @@ function startGame() {
     document.querySelector("#figurersad").classList.add("hide");
     document.querySelector("#figurerneutral").classList.remove("hide");
 
+    document.querySelector("#sadsmiley").classList.add("hide");
+    document.querySelector("#happysmiley").classList.add("hide");
+
 
     liv = 3;
     points = 0;
@@ -116,6 +119,8 @@ function goodSelector() {
 
         document.querySelector("#figurerhappy").classList.remove("hide");
         document.querySelector("#figurerneutral").classList.add("hide");
+
+        document.querySelector("#happysmiley").classList.remove("hide");
     } else {
         console.log("du fik ikke points")
 
@@ -126,6 +131,9 @@ function goodSelector() {
 
         document.querySelector("#figurersad").classList.remove("hide");
         document.querySelector("#figurerneutral").classList.add("hide");
+
+        document.querySelector("#sadsmiley").classList.remove("hide");
+
     }
 
     // Billedet forsvinder - animation
@@ -166,7 +174,7 @@ function badSelector() {
         document.querySelector("#figurersad").classList.remove("hide");
         document.querySelector("#figurerneutral").classList.add("hide");
 
-
+        document.querySelector("#sadsmiley").classList.remove("hide");
 
     } else {
         console.log("du fik points")
@@ -179,6 +187,9 @@ function badSelector() {
 
         document.querySelector("#figurerhappy").classList.remove("hide");
         document.querySelector("#figurerneutral").classList.add("hide");
+
+        document.querySelector("#happysmiley").classList.remove("hide");
+
 
     }
 
@@ -206,7 +217,8 @@ function respawn() {
     document.querySelector("#billede" + randomtal).classList.add("hide");
 
 
-    randomtal = Math.floor(Math.random() * 10) + 1;
+    randomtal = Math.floor(Math.random() * 20) + 1;
+    console.log(randomtal);
 
     // Der vises et nyt random billede
     // hide classen fjernes
@@ -222,6 +234,9 @@ function respawn() {
     document.querySelector("#figurerhappy").classList.add("hide");
     document.querySelector("#figurersad").classList.add("hide");
     document.querySelector("#figurerneutral").classList.remove("hide");
+
+    document.querySelector("#sadsmiley").classList.add("hide");
+    document.querySelector("#happysmiley").classList.add("hide");
 
 
 }

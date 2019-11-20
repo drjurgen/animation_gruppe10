@@ -39,8 +39,17 @@ body {
     height: 10vw;
     background-size: cover;
     position: absolute;
-    left: 40vw;
+    left: 70vw;
     top: 5vw;
+}
+
+#start p {
+    font-family: 'Press Start 2P', cursive;
+    color: #F2798F;
+    font-size: 4.5vw;
+    position: absolute;
+    top: 3vw;
+    left: 10vw;
 }
 
 /*---------- INFO SKÆRM ------------------*/
@@ -122,6 +131,26 @@ body {
     position: absolute;
 }
 
+#happysmiley {
+    background-image: url(assets/good_smiley.svg);
+    background-size: cover;
+    width: 24vw;
+    height: 41.37931034482759vw;
+    position: absolute;
+    top: 15vw;
+    left: 22vw;
+}
+
+#sadsmiley {
+    background-image: url(assets/bad_smiley.svg);
+    background-size: cover;
+    width: 24vw;
+    height: 41.37931034482759vw;
+    position: absolute;
+    top: 15vw;
+    left: 22vw;
+}
+
 /*-------------- BILLEDER ------------*/
 
 #billeder {
@@ -199,6 +228,79 @@ body {
     height: 38.018957345971565vw;
     background-size: cover;
 }
+
+#billede11 {
+    background-image: url(assets/good_6.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede12 {
+    background-image: url(assets/good_7.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede13 {
+    background-image: url(assets/good_8.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede14 {
+    background-image: url(assets/good_9.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede15 {
+    background-image: url(assets/good_10.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede16 {
+    background-image: url(assets/bad_6.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede17 {
+    background-image: url(assets/bad_7.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede18 {
+    background-image: url(assets/bad_8.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede19 {
+    background-image: url(assets/bad_9.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+#billede20 {
+    background-image: url(assets/bad_10.svg);
+    width: 24vw;
+    height: 41.37931034482759vw;
+    background-size: cover;
+}
+
+
+
 
 /*--------- GAME UI ----------------*/
 
@@ -351,7 +453,7 @@ body {
 .tryk {
     animation-name: tryk_kf;
     animation-iteration-count: 1;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in;
 }
 
@@ -364,7 +466,7 @@ body {
         transform: scale(0.5);
     }
 
-    20% {
+    30% {
         transform: scale(1);
     }
 
