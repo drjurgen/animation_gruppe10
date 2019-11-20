@@ -10,19 +10,27 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    width: 100%;
+}
+
 nav {
-    text-align: center;
     font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
-    position: sticky;
-    top: 5vw;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #592E56;
 }
 
 nav a {
     text-decoration: none;
     margin-left: 4px;
     margin-right: 4px;
-    color: black;
+    color: white;
     transition: 0.3s;
     font-weight: 500;
     text-transform: uppercase;
@@ -33,12 +41,10 @@ nav a:hover {
     text-decoration: none;
     margin-left: 4px;
     margin-right: 4px;
-    color: hotpink;
+    color: #F2798F;
 }
 
-#top {
-    padding-top: 10px;
-}
+#top {}
 
 /******* TEKST*******************/
 
@@ -47,11 +53,14 @@ h1 {
     font-weight: 700;
     font-size: 3.5rem;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #F2798F;
 }
 
 
 h2 {
     font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
 
 }
 
@@ -68,18 +77,127 @@ a {
     position: fixed;
     bottom: 2vw;
     right: 2vw;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2rem;
-    color: black;
 }
 
-#tiltop img {
-    width: 7vw;
+.toparrow {
+    width: 60px;
+    height: 60px;
+    background-color: #592E56;
+    border-radius: 50px;
+    background-image: url(arrow.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 22px 0 rgba(0, 0, 0, .1);
 }
-
 
 section {
-    padding: 30px 25px 0 25px;
+    padding: 30px 50px 0 50px;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 0 25px 30px 30px;
+    box-shadow: 0 0 22px 0 rgba(0, 0, 0, .1);
+}
+
+/******* INFO*******************/
+#info .col {
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+#info .sectionwrapper div:last-child {
+    padding-left: 32px;
+}
+
+#info .sectionwrapper div:nth-last-child(2) {
+    padding-right: 32px;
+}
+
+#info .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 2;
+}
+
+#info a {
+    text-decoration: none;
+    color: slateblue;
+    transition: 0.3s;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+#info a:hover {
+    text-decoration: none;
+    color: #F2798F;
+}
+
+/******* DIAGRAMMER*******************/
+#diagrammer .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 2;
+}
+
+/******* MOODBOARD*******************/
+#moodboard .col {
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+#moodboard .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 2;
+}
+
+/******* DESIGNDOKUMENTATION*******************/
+#designdokumentation .col {
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+#designdokumentation .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 2;
+}
+
+/******* MOCKUPS*******************/
+#mockups .col {
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+#mockups .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 2;
+}
+
+
+/******* FERNISERING*******************/
+#fernisering .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 2;
+}
+
+/******* ASSETLISTE*******************/
+#assetliste .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 1;
+}
+
+#assetliste .sectionwrapper .col-lg img {
+    max-height: 100px;
+}
+
+/******* ASSETLISTE*******************/
+#testdokumentation .sectionwrapper {
+    margin-bottom: 60px;
+}
+
+#testdokumentation .col-lg {
+    flex-basis: 1000px;
+    flex-grow: 1;
 }
