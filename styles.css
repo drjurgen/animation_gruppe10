@@ -515,6 +515,15 @@ body {
     bottom: 2vw;
 }
 
+.more_arrow {
+    background-image: url(svg/arrow_pixel.svg);
+    background-size: cover;
+    height: 4.17vw;
+    position: absolute;
+    width: 5vw;
+    right: 26vw;
+    bottom: 10vw;
+}
 
 /*--------ANIMATIONER--------*/
 
