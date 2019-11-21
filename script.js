@@ -115,6 +115,8 @@ function goodSelector() {
         // faar point hvis man vælger rigtigt
         points++;
 
+        document.querySelector("#correct").play();
+
         document.querySelector("#score_points").innerHTML = points;
 
         document.querySelector("#figurerhappy").classList.remove("hide");
@@ -129,6 +131,7 @@ function goodSelector() {
         // mister liv hvis man vælger forkert
         liv--;
 
+        document.querySelector("#wrong").play();
         document.querySelector("#figurersad").classList.remove("hide");
         document.querySelector("#figurerneutral").classList.add("hide");
 
@@ -171,6 +174,8 @@ function badSelector() {
         // faar point hvis man vælger rigtigt
         liv--;
 
+        document.querySelector("#wrong").play();
+
         document.querySelector("#figurersad").classList.remove("hide");
         document.querySelector("#figurerneutral").classList.add("hide");
 
@@ -182,6 +187,8 @@ function badSelector() {
 
         // mister liv hvis man vælger forkert
         points++;
+
+        document.querySelector("#correct").play();
 
         document.querySelector("#score_points").innerHTML = points;
 
