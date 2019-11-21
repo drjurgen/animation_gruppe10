@@ -83,6 +83,7 @@ function startGame() {
 
     liv = 3;
     points = 0;
+    console.log(liv);
 
     document.querySelector("#score_points").innerHTML = points;
 
@@ -90,6 +91,9 @@ function startGame() {
     // Eventlisteners til good og bad knapper - click
     document.querySelector("#good_knap").addEventListener("click", goodSelector);
     document.querySelector("#bad_knap").addEventListener("click", badSelector);
+
+    document.querySelector("#good_knap").classList.remove("tryk");
+    document.querySelector("#bad_knap").classList.remove("tryk");
 
 
     // Baggrundsmusik spilles
@@ -102,6 +106,7 @@ function startGame() {
 
     // et random billede vises
     document.querySelector("#billede" + randomtal).classList.remove("hide");
+
 
 }
 
@@ -123,6 +128,8 @@ function goodSelector() {
         document.querySelector("#figurerneutral").classList.add("hide");
 
         document.querySelector("#happysmiley").classList.remove("hide");
+
+
     } else {
         console.log("du fik ikke points")
 
@@ -137,27 +144,29 @@ function goodSelector() {
 
         document.querySelector("#sadsmiley").classList.remove("hide");
 
+        console.log(liv);
+
     }
 
     // Billedet forsvinder - animation
 
+
+
+    if (liv >= 1) {
+        this.addEventListener("animationend", respawn);
+
+    } else {
+        gameOver();
+
+    }
     this.classList.add("tryk");
 
 
     document.querySelector("#good_knap").removeEventListener("click", goodSelector);
     document.querySelector("#bad_knap").removeEventListener("click", badSelector);
 
-
-
     // if sætning om der er liv tilbage eller ikke
 
-    if (liv >= 1) {
-        this.addEventListener("animationend", respawn);
-
-    } else {
-        this.addEventListener("animationend", gameOver);
-
-    }
 
 
 }
@@ -181,6 +190,10 @@ function badSelector() {
 
         document.querySelector("#sadsmiley").classList.remove("hide");
 
+        console.log(liv);
+
+
+
     } else {
         console.log("du fik points")
 
@@ -201,20 +214,20 @@ function badSelector() {
     }
 
     this.classList.add("tryk");
+    document.querySelector("#good_knap").removeEventListener("click", goodSelector);
+    document.querySelector("#bad_knap").removeEventListener("click", badSelector);
 
 
-    // Billedet forsvinder - animation, add class "hide"
 
     // if sætning om der er liv tilbage eller ikke
-
     if (liv >= 1) {
         this.addEventListener("animationend", respawn);
 
     } else {
-        this.addEventListener("animationend", gameOver);
+        gameOver();
     }
 
-    this.removeEventListener("click", badSelector);
+
 
 }
 
@@ -235,6 +248,8 @@ function respawn() {
     document.querySelector("#bad_knap").classList.remove("tryk");
 
     // fjerne event listeners
+
+
     document.querySelector("#good_knap").addEventListener("click", goodSelector);
     document.querySelector("#bad_knap").addEventListener("click", badSelector);
 
@@ -292,11 +307,6 @@ function gameOver() {
 
 
     // slukker alle event listeners
-    document.querySelector("#good_knap").removeEventListener("click", goodSelector);
-    document.querySelector("#bad_knap").removeEventListener("click", badSelector);
-
-    document.querySelector("#good_knap").removeEventListener("click", goodSelector);
-    document.querySelector("#bad_knap").removeEventListener("click", badSelector);
 
 
     // eventlistener til spil igen knap og main menu knap
@@ -306,6 +316,5 @@ function gameOver() {
 
     document.querySelector("#good_knap").classList.remove("tryk");
     document.querySelector("#bad_knap").classList.remove("tryk");
-
 
 }
