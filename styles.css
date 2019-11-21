@@ -507,6 +507,14 @@ body {
     position: absolute;
 }
 
+#mereinfo {
+    height: 13vw;
+    width: 21vw;
+    position: absolute;
+    right: 3vw;
+    bottom: 2vw;
+}
+
 
 /*--------ANIMATIONER--------*/
 
@@ -538,7 +546,7 @@ body {
 .timer {
     animation-name: timer_kf;
     animation-iteration-count: 1;
-    animation-duration: 60s;
+    animation-duration: 45s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
