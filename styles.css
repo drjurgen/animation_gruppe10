@@ -453,7 +453,7 @@ body {
 .tryk {
     animation-name: tryk_kf;
     animation-iteration-count: 1;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
 }
 
@@ -466,7 +466,7 @@ body {
         transform: scale(0.5);
     }
 
-    30% {
+    50% {
         transform: scale(1);
     }
 
@@ -478,7 +478,7 @@ body {
 .timer {
     animation-name: timer_kf;
     animation-iteration-count: 1;
-    animation-duration: 30s;
+    animation-duration: 60s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
