@@ -70,7 +70,42 @@ body {
 #gameinfo {
     height: 100%;
     width: 100%;
+    background-image: url(mere/popup.svg);
+    background-size: cover;
 
+}
+
+#gameinfo p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5vw;
+    color: black;
+}
+
+.tekstinfo {
+    width: 70vw;
+    top: 14vw;
+    left: 23vw;
+    position: absolute;
+}
+
+#goodselector_info {
+    background-image: url(svg/good_knap.svg);
+    background-size: cover;
+    height: 5vw;
+    width: 5vw;
+    position: absolute;
+    left: -7vw;
+    top: 3.5vw;
+}
+
+#badselector_info {
+    background-image: url(svg/bad_knap.svg);
+    background-size: cover;
+    height: 5vw;
+    width: 5vw;
+    position: absolute;
+    left: -7vw;
+    top: 8.5vw;
 }
 
 /*--------GAME/BACKGROUND/FOREGROUND--------*/
@@ -84,7 +119,6 @@ body {
 #game_background {
     width: 100%;
     height: 100%;
-    /* background-image: url(); */
     background-size: cover;
     position: absolute;
     pointer-events: none;
@@ -415,8 +449,8 @@ body {
     height: 6.875vw;
     background-size: cover;
     position: absolute;
-    top: 30vw;
-    left: 20vw;
+    top: 33vw;
+    left: 29vw;
 }
 
 #mainmenuknap_lc {
@@ -425,8 +459,8 @@ body {
     height: 6.875vw;
     background-size: cover;
     position: absolute;
-    top: 30vw;
-    left: 40vw;
+    top: 33vw;
+    left: 52vw;
 }
 
 /*--------GAME OVER--------*/
@@ -444,8 +478,9 @@ body {
     height: 6.875vw;
     background-size: cover;
     position: absolute;
-    top: 30vw;
-    left: 20vw;
+    top: 33vw;
+    left: 27vw;
+    margin-left: 2vw;
 }
 
 #mainmenuknap_go {
@@ -454,11 +489,23 @@ body {
     height: 6.875vw;
     background-size: cover;
     position: absolute;
-    top: 30vw;
-    left: 40vw;
+    top: 33vw;
+    left: 52vw;
 }
 
+#gameover p,
+#levelcomplete p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5vw;
+    color: black;
+}
 
+.tekst {
+    width: 70vw;
+    top: 13vw;
+    left: 16vw;
+    position: absolute;
+}
 
 
 /*--------ANIMATIONER--------*/

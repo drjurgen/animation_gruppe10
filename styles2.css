@@ -142,6 +142,11 @@ section {
     flex-grow: 2;
 }
 
+#diagrammer .col {
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
 /******* MOODBOARD*******************/
 #moodboard .col {
     flex-basis: 500px;
@@ -166,12 +171,12 @@ section {
 
 /******* MOCKUPS*******************/
 #mockups .col {
-    flex-basis: 500px;
+    flex-basis: 300px;
     flex-grow: 1;
 }
 
 #mockups .col-lg {
-    flex-basis: 1000px;
+    flex-basis: 1100px;
     flex-grow: 2;
 }
 
@@ -189,7 +194,7 @@ section {
 }
 
 #assetliste .col-lg {
-    flex-basis: 1000px;
+    flex-basis: 1100px;
     flex-grow: 1;
 }
 
