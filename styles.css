@@ -515,6 +515,14 @@ body {
     bottom: 2vw;
 }
 
+#mereinfo2 {
+    height: 13vw;
+    width: 21vw;
+    position: absolute;
+    right: 3vw;
+    bottom: 2vw;
+}
+
 .more_arrow {
     background-image: url(svg/arrow_pixel.svg);
     background-size: cover;
